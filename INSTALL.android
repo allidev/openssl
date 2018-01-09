@@ -6,3 +6,6 @@ section I: android
 3. ./config shared no-ssl2 no-ssl3 no-comp no-hw no-engine
 4. make depend
 5. make all
+
+After build, one needs to unset CROSS_COMPILE env variable
+6. unset CROSS_COMPILE
