@@ -1,0 +1,8 @@
+INSTALL
+section I: android
+1. git checkout OpenSSL_1_0_2-stable
+2. export ANDROID_NDK_ROOT=~/Documents/Personal/programming/android-ndk-r12b \
+&& . ./setenv-android_openssl.sh
+3. ./config shared no-ssl2 no-ssl3 no-comp no-hw no-engine
+4. make depend
+5. make all
