@@ -9,3 +9,14 @@ section I: android
 3. cd openssl && ./config shared no-ssl2 no-ssl3 no-comp no-hw no-engine
 4. make depend
 5. make all
+
+section II: iOS
+1. mkdir openssl-ios && pushd openssl-ios
+2. git clone https://github.com/allidev/openssl
+3. cd openssl && git checkout OpenSSL_1_0_2-stable
+4. cp -r script-ios ../
+5. popd && mkdir sources && mv -r openssl ./sources/
+6. pushd script-ios && ./update_libssl_ios
+
+The compiled universal static libraries are under
+sources/ios-openssl/lib
