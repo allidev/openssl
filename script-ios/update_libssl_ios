@@ -19,6 +19,7 @@ function setup ()
 
 function cleanup () 
 {
+    unset CROSS_COMPILE
     rm -rf "/tmp/openssl"
     rm -rf "/tmp/openssl-*.log"
 }
